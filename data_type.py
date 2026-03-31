@@ -1,4 +1,4 @@
-"""# data type 
+# data type 
 Fast_Name = "Rayhan parvez Rokey"
 address = 'Chattogram'
 email = 'mohamedrayhanrokey102@gmail.com'
@@ -21,7 +21,6 @@ print(hello)
 a = 'Hello'
 b = 'World'
 print("This is arth" + ' ' + a)
-"""
 
 # Bool data type 
 hello = True
