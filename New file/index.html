@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md Rayhan Parvez Rokey - Profile Card (Dark Mode)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* CSS Section */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            /* পুরো পেজের ব্যাকগ্রাউন্ড পিওর ব্ল্যাক */
+            background-color: #0f4e3c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* মেইন কার্ড কন্টেইনার - ডার্ক কালার */
+        .profile-card {
+            background-color: #1a1a1a; /* ডার্ক গ্রে কার্ড */
+            width: 100%;
+            max-width: 380px;
+            border-radius: 20px;
+            overflow: hidden;
+            /* হালকা গ্লাস-মর্ফিজম ইফেক্ট */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(255,255,255,0.05); /* হালকা বর্ডার */
+        }
+
+        .profile-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+        }
+
+        /* ছবির অংশ */
+        .image-section {
+            width: 100%;
+            height: 300px;
+            background: #2d3436;
+            overflow: hidden;
+        }
+
+        .image-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* স্ক্রিনশটের মতো ব্ল্যাক এন্ড হোয়াইট লুক */
+            filter: grayscale(100%);
+            transition: 0.6s ease;
+        }
+
+        .profile-card:hover img {
+            filter: grayscale(0%); /* হোভার করলে রঙিন হবে */
+            transform: scale(1.03); /* হালকা জুম */
+        }
+
+        /* কন্টেন্ট অংশ */
+        .content-section {
+            padding: 25px;
+            text-align: center;
+        }
+
+        /* নাম - সাদা রং */
+        .content-section h2 {
+            font-size: 22px;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        /* পদবী বা গোল - নীল রং */
+        .content-section p.goal {
+            font-size: 13px;
+            color: #0984e3; /* অ্যাকসেন্ট কালার */
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        /* লার্নিং লিস্ট স্টাইল - হালকা ডার্ক */
+        .learning-info {
+            text-align: left;
+            background-color: #262626; /* হালকা ডার্ক */
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            /* অ্যাকসেন্ট কালার বর্ডার */
+            border-left: 5px solid #0984e3;
+        }
+
+        .learning-info h4 {
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #f1f2f6;
+            font-weight: 600;
+        }
+
+        .learning-info ul {
+            list-style: none;
+        }
+
+        .learning-info ul li {
+            font-size: 13px;
+            color: #bdc3c7; /* হালকা ধূসর টেক্সট */
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* চেক মার্কের রঙ - সবুজ */
+        .learning-info ul li i {
+            color: #2ecc71;
+        }
+
+        /* প্রসেসিং আইকনের রঙ - হলুদ */
+        .learning-info ul li.learning i {
+            color: #f1c40f;
+        }
+
+        /* সোশ্যাল আইকন এরিয়া */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        /* প্রতিটি সোশ্যাল আইকন - হালকা ডার্ক সার্কেল */
+        .social-links a {
+            color: #a0a0a0;
+            background-color: #262626;
+            width: 38px;
+            height: 38px;
+            line-height: 38px;
+            border-radius: 50%;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        /* সোশ্যাল আইকনে মাউস রাখলে - নীল ব্যাকগ্রাউন্ড */
+        .social-links a:hover {
+            color: #ffffff;
+            background-color: #0984e3;
+            transform: translateY(-2px);
+        }
+
+        /* লার্নিং মোড ব্যাজ */
+        .status-badge {
+            display: inline-block;
+            background-color: #0984e3;
+            color: #ffffff;
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-size: 11px;
+            margin-top: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-card">
+        <div class="image-section">
+            <img src="rokey.jpg" alt="Md Rayhan Parvez Rokey">
+        </div>
+
+        <div class="content-section">
+            <h2>Md Rayhan Parvez Rokey</h2>
+            <p class="goal"> Learning Python </p>
+
+            <div class="learning-info">
+                <h4><i class="fas fa-terminal"></i> Learning Progress:</h4>
+                <ul>
+                    <li class="learning"><i class="fas fa-sync fa-spin"></i> Control Flow (Loops/Logic)</li>
+                </ul>
+            </div>
+
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+
+            <span class="status-badge">Learning Mode 🚀</span>
+        </div>
+    </div>
+
+</body>
+</html>
